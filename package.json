@@ -1,0 +1,29 @@
+{
+  "name": "passdom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "passdom": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeel-pathak/passdom.git"
+  },
+  "author": "Zeel Pathak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeel-pathak/passdom/issues"
+  },
+  "homepage": "https://github.com/zeel-pathak/passdom#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "prompt": "^1.3.0"
+  }
+}
