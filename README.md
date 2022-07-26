@@ -49,7 +49,7 @@ Contributions are welcome!!
 
 Hell Yeah
 
-CodeBin can easily be installed in your networks, and it is all Free and Open Source
+passdom can easily be installed in your networks, and it is all Free and Open Source
 * [ Source Code ] -> https://github.com/zeel-pathak/passdom
 
 ## Future update 🔥
