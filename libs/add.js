@@ -8,7 +8,7 @@ const add = async () => {
 
     if(Object.keys(data).includes(process.argv[3].toLowerCase())){
 
-        console.log(`Credentials for ${process.argc[3]} already exists!  Procedding further will overwrite the existing credentials.
+        console.log(`Credentials for ${process.argv[3]} already exists!  Procedding further will overwrite the existing credentials.
 ctrl + c to exit.`)
         const username = await input("What is the username?")
         const password = await input("What is the password?")
@@ -24,8 +24,9 @@ ctrl + c to exit.`)
             if (err) {
                 console.log('Error Storing Credentials', err.message)
             } else {
-                console.log(`successfully added the credential
-                
+                console.log(`
+successfully added the credential
+
 ->  passdom ${process.argv[3]} // to retrieve the credentials of ${process.argv[3]}`)
             }
         })
@@ -48,8 +49,9 @@ ctrl + c to exit.`)
             if (err) {
                 console.log('Error Storing Credentials', err.message)
             } else {
-            console.log(`successfully added the credential
-                
+            console.log(`
+successfully added the credential
+
 ->  passdom ${process.argv[3]} // to retrieve the credentials of ${process.argv[3]}`)
             }
         })

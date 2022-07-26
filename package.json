@@ -1,7 +1,7 @@
 {
   "name": "passdom",
   "version": "1.0.0",
-  "description": "",
+  "description": "passdom is a CLI tool, built to help  you store yout credentials on the Command line or terminal",
   "main": "index.js",
   "bin": {
     "passdom": "./index.js"
@@ -14,6 +14,13 @@
     "type": "git",
     "url": "git+https://github.com/zeel-pathak/passdom.git"
   },
+  "keywords": [
+    "passdom",
+    "password manager",
+    "store password",
+    "cli",
+    "terminal"
+  ],
   "author": "Zeel Pathak",
   "license": "MIT",
   "bugs": {
