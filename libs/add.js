@@ -2,11 +2,14 @@ const process = require("process");
 const data = require("../localStorage/cred.json");
 const {input, over} = require("../util/input.js");
 const fs = require("fs");
+const { Console } = require("console");
 
 const add = async () => {
 
     if(Object.keys(data).includes(process.argv[3].toLowerCase())){
 
+        console.log(`Credentials for ${process.argc[3]} already exists!  Procedding further will overwrite the existing credentials.
+ctrl + c to exit.`)
         const username = await input("What is the username?")
         const password = await input("What is the password?")
 
