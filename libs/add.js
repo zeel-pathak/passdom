@@ -19,9 +19,11 @@ const add = async () => {
  
         fs.writeFile(`${__dirname}/../localStorage/cred.json`, JSON.stringify(data, null, 2), err => {
             if (err) {
-                console.log('Error writing file', err)
+                console.log('Error Storing Credentials', err.message)
             } else {
-                console.log('Successfully wrote file')
+                console.log(`successfully added the credential
+                
+->  passdom ${process.argv[3]} // to retrieve the credentials of ${process.argv[3]}`)
             }
         })
 
@@ -37,13 +39,15 @@ const add = async () => {
             username,
             password
         };
-        console.log(data)
+
          
         fs.writeFile(`${__dirname}/../localStorage/cred.json`, JSON.stringify(data, null, 2), err => {
             if (err) {
-                console.log('Error writing file', err)
+                console.log('Error Storing Credentials', err.message)
             } else {
-                console.log('Successfully wrote file')
+            console.log(`successfully added the credential
+                
+->  passdom ${process.argv[3]} // to retrieve the credentials of ${process.argv[3]}`)
             }
         })
     }
