@@ -1,6 +1,7 @@
 <centre><img src="Images/passdom_full.svg"></centre>
 # 🔑 passdom 🔑
 
+
 Every day, we utilise passwords. However, did we have a secure means to keep passwords? Browsers can retain passwords for the web, but what about CLI and terminals?
 
 Passdom is here for help. Passdom is a CLI tool, built to help you store your credentials on the Command line or terminal
