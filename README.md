@@ -21,6 +21,8 @@ passdom -a <website name> // to add your credentials, it will ask you your crede
 passdom <website name> //to find the credentials of the given website
 
 passdom -r <website name> // to remove the credentials of given website
+
+passdom -ls // to list all your credentials
 ```
 ```js
 passdom add <website name> // to add your credentials, it will ask you your credentials {Website name is the name of site of which you have to add credentials}
@@ -28,6 +30,8 @@ passdom add <website name> // to add your credentials, it will ask you your cred
 passdom <website name> //to find the credentials of the given website
 
 passdom remove <website name> // to remove the credentials of given website
+
+passdom list // to list all your credentials
 
 ```
 
