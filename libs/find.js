@@ -5,7 +5,7 @@ const {over} = require("../util/input.js");
 
 const find = () => {
 
-    if(process.argv[3] === undefined){
+    if(process.argv[2] === undefined){
         console.log("One more parameter required,")
         console.log("Try passdom <Website name> instead.")
         return over()
