@@ -1,6 +1,6 @@
 {
   "name": "passdom",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Passdom is a CLI tool, built to help you store your credentials on the Command line or terminal",
   "main": "index.js",
   "bin": {
