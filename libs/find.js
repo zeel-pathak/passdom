@@ -7,7 +7,7 @@ const find = () => {
     if(Object.keys(data).includes(process.argv[2].toLowerCase())){
         console.log(`
 ========================================================================
-                        ${process.argv[2]} Credentials
+                    Credentials for '${process.argv[2]}'
 
     Username -> ${data[process.argv[2].toLowerCase()].username}
     Password -> ${data[process.argv[2].toLowerCase()].password}
@@ -20,7 +20,7 @@ const find = () => {
     }
     else {
         console.error(`
-    No Credentials Found
+    No Credentials Found for ${process.argv[2].toLowerCase()}
 `)
 over()
 

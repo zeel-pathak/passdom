@@ -5,7 +5,8 @@ const list = () => {
   const list = Object.entries(data);
   if (!list.length) {
     console.error(`
-    No Credentials Found
+    No Credentials Found,
+    Store credentials using "passdom -a <website name>" or "passdom add <website name>"
 `);
     return over();
   }
@@ -18,7 +19,7 @@ const list = () => {
     { username = "Not Setted", password = "Not Setted" },
   ] of list) {
     console.log(`
-        '${host}' Credentials
+        Credentials for '${host}' 
             Username -> ${username}
             Password -> ${password}
     `);

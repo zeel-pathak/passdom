@@ -26,7 +26,7 @@ passdom -r <website name> // to remove the credentials of given website
 passdom -ls // to list all your credentials
 ```
 ```js
-passdom add <website name> // to add your credentials, it will ask you your credentials {Website name is the name of site of which you have to add credentials}
+passdom add <website name>  // to add your credentials, it will ask you your credentials {Website name is the name of site of which you have to add credentials}
 
 passdom <website name> //to find the credentials of the given website
 
@@ -54,10 +54,19 @@ Hell Yeah
 
 passdom can easily be installed in your networks, and it is all Free and Open Source
 * [ Source Code ] -> https://github.com/zeel-pathak/passdom
+* [ NPM Package] ->  https://www.npmjs.com/package/passdom
 
-## Future update 🔥
 
-* Currently, passdom can only store one credential for a particular website, we want passdom to be able to store multiple credentials for a website.
+## Recent updates 🔥
+
+* Passdom asks for confirmation before removing the credentials.
+* Added list command to show all the commands together.
+* Added some reserved keywords which can't be used for naming the host or website name
+
+## Future updates 🔥
+
+* Currently, Passdom can only store one credential for a particular website. We want Passdom to be able to store multiple credentials for a particular website. 
 * Finding credentials should be made easier.
-* Extra flags should be added to help and made easy to use as well as a flag to list all credentials.
-* Should ask again for confirmation while removing.
+* Add the "all" flag to remove all credentials simultaneously instead of one by one.
+* Add "help" flag to help developers find all the command and flags along with their descriptions
+
