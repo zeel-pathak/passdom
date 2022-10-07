@@ -4,6 +4,13 @@ const {over} = require("../util/input.js");
 
 
 const find = () => {
+
+    if(process.argv[3] === undefined){
+        console.log("One more parameter required,")
+        console.log("Try passdom <Website name> instead.")
+        return over()
+    }
+
     if(Object.keys(data).includes(process.argv[2].toLowerCase())){
         console.log(`
 ========================================================================
