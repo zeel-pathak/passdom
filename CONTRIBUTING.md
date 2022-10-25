@@ -1,7 +1,7 @@
 
 # Contributor guidelines
 
-If you are looking to help with a code contribution our project uses JavaScript. If you don't feel ready to make a code contribution yet, no problem! You can also check out the documentation issues or the design issues that we have.
+If you are looking to help with a code contribution our project uses **JavaScript**. If you don't feel ready to make a code contribution yet, no problem! You can also check out the documentation issues or the design issues that we have.
 
 ### How do I make a contribution?
 
