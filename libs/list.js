@@ -1,7 +1,13 @@
-const data = require("../localStorage/cred.json");
 const { over } = require("../util/input.js");
+const fileExists = require("../util/CredentialsFileExists.js");
+const os = require("os");
 
-const list = () => {
+const list = async() => {
+
+  //We need to find wheather the Cred file is there or not.
+  await fileExists(os.homedir());
+  const data = require(`${os.homedir()}/.credentials/cred.json`);
+
   const list = Object.entries(data);
   if (!list.length) {
     console.error(`
@@ -14,6 +20,7 @@ const list = () => {
   console.log(
     `========================================================================`
   );
+
   for (const [
     host,
     { username = "Not Setted", password = "Not Setted" },
@@ -24,6 +31,7 @@ const list = () => {
             Password -> ${password}
     `);
   }
+
   console.log(
     `========================================================================`
   );
