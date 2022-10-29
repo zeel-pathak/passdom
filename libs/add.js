@@ -1,9 +1,10 @@
 const process = require("process");
-  const fileExists = require("../util/CredentialsFileExists.js");
-  const os = require("os");
+const fileExists = require("../util/CredentialsFileExists.js");
+const os = require("os");
 const { input, over } = require("../util/input.js");
 const fs = require("fs");
 const keywords = require("../reservedKeywords/reserveKeywords.js");
+const encryptPassword = require("../util/encryptPassword.js");
 
 const add = async () => {
   if (process.argv[3] === undefined) {
@@ -32,7 +33,9 @@ press 'ctrl + c' to exit.`);
   }
 
   const username = await input("What is the username?");
-  const password = await input("What is the password?");
+  const rawPassword = await input("What is the password?");
+
+  const password = await encryptPassword(rawPassword);
 
   over();
 
