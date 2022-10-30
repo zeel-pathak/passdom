@@ -2,7 +2,7 @@ const process = require('process');
 const { over } = require("../util/input.js");
 const fileExists = require("../util/CredentialsFileExists.js");
 const os = require("os");
-
+const decryptPassword = require("../util/decryptPassword.js");
 
 const find = async () => { 
   //We need to find wheather the Cred file is there or not.
@@ -23,12 +23,15 @@ const find = async () => {
         return over();
     }
     
+    const username = data[process.argv[2].toLowerCase()].username;
+    const password = await decryptPassword(data[process.argv[2].toLowerCase()].password);
+    
     console.log(`
 ========================================================================
                     Credentials for '${process.argv[2]}'
 
-    Username -> ${data[process.argv[2].toLowerCase()].username}
-    Password -> ${data[process.argv[2].toLowerCase()].password}
+    Username -> ${username}
+    Password -> ${password}
      
 ========================================================================
 `);

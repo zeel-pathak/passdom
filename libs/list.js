@@ -1,6 +1,7 @@
 const { over } = require("../util/input.js");
 const fileExists = require("../util/CredentialsFileExists.js");
 const os = require("os");
+const decryptPassword = require("../util/decryptPassword.js");
 
 const list = async() => {
 
@@ -25,10 +26,11 @@ const list = async() => {
     host,
     { username = "Not Setted", password = "Not Setted" },
   ] of list) {
+    const rawPassword = await decryptPassword(password);
     console.log(`
-        Credentials for '${host}' 
+        Credentials for '${host.toUpperCase()}' 
             Username -> ${username}
-            Password -> ${password}
+            Password -> ${rawPassword}
     `);
   }
 

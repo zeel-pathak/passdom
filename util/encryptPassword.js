@@ -1,26 +1,21 @@
 var crypto = require("crypto");
 
 const encryptPassword = (rawPassword) => {
-    return new Promise((resolve, reject) => {
-
-        const algorithm = 'aes-192-cbc';
-        const password = 'Password used to generate key';
-        
-        // First, we'll generate the key. The key length is dependent on the algorithm.
-        // In this case for aes192, it is 24 bytes (192 bits).
-        crypto.scrypt(password, 'salt', 24, (err, key) => {
-            if (err) throw reject(err);
-            // Then, we'll generate a random initialization vector
-            crypto.randomFill(new Uint8Array(16), (err, iv) => {
-            if (err) throw err;
-
-            const cipher = crypto.createCipheriv(algorithm, key, iv);
-
-            let encryptedPassword = cipher.update( rawPassword , 'utf8', 'hex');
-            encryptedPassword += cipher.final('hex');
-            return resolve(encryptedPassword);
-            });
-        });
+  return new Promise((resolve, reject) => {
+      
+    const key = crypto.createHash('sha256').update('Nixnogen').digest()
+    const iv = 'a2xhcgAAAAAAAAAA'
+    
+    var cipher = crypto.createCipheriv(
+      "aes-256-cbc",
+      key,
+      iv
+    );
+          
+    return resolve(Buffer.concat([
+      cipher.update(rawPassword),
+      cipher.final()
+    ]).toString("base64"));
   });
 };
 
