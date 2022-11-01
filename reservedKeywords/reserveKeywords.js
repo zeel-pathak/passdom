@@ -1,1 +1,1 @@
-module.exports = ["add", "-a", "remove", "-r", "list", "-ls"];
+module.exports = ["add", "-a", "remove", "-r", "list", "-ls", "all"];
