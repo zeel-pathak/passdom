@@ -1,5 +1,6 @@
 const os = require("os");
 const fs = require("fs");
+const process = require("process");
 
 const writeFile = (data) => {
     return new Promise((resolve, reject) => {
@@ -8,11 +9,9 @@ const writeFile = (data) => {
               JSON.stringify(data, null, 2),
               (err) => {
                 if (err) {
-                  reject("Error removing credentials");
+                  reject(err);
                 }
-                resolve(
-                  `Successfully removed credentials for ${process.argv[3].toLowerCase()}`
-                );
+                resolve();
               }
             );
     })
