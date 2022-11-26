@@ -46,6 +46,8 @@ All the credentials are stored on your local computer, so any third party can't 
 If you want to contribute, check out the GitHub repository 
 https://github.com/zeel-pathak/passdom
 
+[Contributing Guideline](/CONTRIBUTING.md)
+
 Contributions are welcome!!
  
 ## Open Source 👐
