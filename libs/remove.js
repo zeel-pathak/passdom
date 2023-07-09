@@ -42,7 +42,7 @@ const remove = async () => {
         delete data[process.argv[3].toLowerCase()];
       }
 
-      await writeFile(data);
+      await writeFile(data, `${os.homedir()}/.credentials/cred.json`);
       console.log(
         `Successfully removed ${process.argv[3].toLowerCase()} credentials`
       );

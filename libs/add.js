@@ -47,7 +47,7 @@ press 'ctrl + c' to exit.`);
       password,
     };
 
-    await writeFile(data);
+    await writeFile(data, `${os.homedir()}/.credentials/cred.json`);
 
     console.log(`
   successfully added the credential for ${process.argv[3]}
